@@ -10,3 +10,48 @@
   %body
     = yield
 
+    .flash-box グループを作成しました
+
+  .wrapper
+    .chat-side
+      .side-header
+        .side-header__box
+          .side-header__box__name name
+          .side-header__box__menu
+            .side-header__box__menu__new-group 
+              %i.fas.fa-edit
+            .side-header__box__menu__edit-user
+              %i.class.fas.fa-cog
+      .groups
+        .groups__group-name
+          grouo-name
+        .groups__group-comment
+          こんにちは
+
+    .chat-main
+      .main-header
+        .main-header__edit-btn Edit
+        .main-header__left-box
+          %h2.main-header__left-box__current-group current-group
+          %ul.main-header__left-box__member-list
+            %li.main-header__left-box__member-list__member Member:
+            
+      .messages
+        .messages__test-user 
+          testuser
+          .messages__date
+            2019/06/26(Wed)
+        .comment
+          こんにちは
+
+      .form
+        .input-box 
+          16px #434A54a
+          .input-box__pic-btn
+            %label.upload-label{for: "message-image"}
+              %i.fa.far.fa-image.fa-2x
+              %input.input-box__image__file{:id => "message-image", :name => "message", :type => "file"}
+
+          .input-box__send-btn
+            Send
+
