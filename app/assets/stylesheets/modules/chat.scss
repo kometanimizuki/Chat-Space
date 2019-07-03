@@ -1,3 +1,7 @@
+@import 'mixins/vendor_prefix.scss';
+@import 'config/colors.scss';
+@import 'config/font-size.scss';
+
 .chat {
   width: calc(100% - 300px);
   .header {
