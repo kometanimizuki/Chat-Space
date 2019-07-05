@@ -11,13 +11,13 @@
     = render 'layouts/notifications'
     = yield
 
-    .flash-box グループを作成しました
+    .flash-box
 
   .wrapper
     .chat-side
       .side-header
         .side-header__box
-          .side-header__box__name name
+          .side-header__box__name
           .side-header__box__menu
             .side-header__box__menu__new-group 
               %i.fas.fa-edit
@@ -25,25 +25,20 @@
               %i.class.fas.fa-cog
       .groups
         .groups__group-name
-          grouo-name
         .groups__group-comment
-          こんにちは
 
     .chat-main
       .main-header
-        .main-header__edit-btn Edit
+        .main-header__edit-btn
         .main-header__left-box
-          %h2.main-header__left-box__current-group current-group
+          %h2.main-header__left-box__current-group
           %ul.main-header__left-box__member-list
             %li.main-header__left-box__member-list__member Member:
             
       .messages
         .messages__test-user 
-          testuser
           .messages__date
-            2019/06/26(Wed)
         .comment
-          こんにちは
 
       .form
         .input-box 
