@@ -125,10 +125,10 @@
       background-color: #ddd;
 
       .input-box {
-        background-color: $white;
-        padding: 0 10px;
-        height: 50px;
-        display: flex;
+          background-color: $white;
+          padding: 0 10px;
+          height: 50px;
+          display: flex;
 
         &__pic-btn {
           padding-right: 15px;
@@ -143,17 +143,15 @@
         }
       
         &__send-btn {
+          &__send {
           position: absolute;
           right: 40px;
           background-color: $btn-color;
           width: 100px;
-          height: 30px;
+          height: 50px;
           color: $white;
           text-align: center;
           padding: 10px;
-
-          &__send {
-            display: none;
           }
       } 
     }
