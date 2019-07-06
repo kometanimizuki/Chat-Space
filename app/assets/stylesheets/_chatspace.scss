@@ -151,6 +151,10 @@
           color: $white;
           text-align: center;
           padding: 10px;
+
+          &__send {
+            display: none;
+          }
       } 
     }
   }

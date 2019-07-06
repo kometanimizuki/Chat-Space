@@ -42,12 +42,12 @@
 
       .form
         .input-box 
-          16px #434A54a
+          %input{:cols => "30", :name => "text", :placeholder => "text", :rows => "10"}/
+          %label.text text
           .input-box__pic-btn
             %label.upload-label{for: "message-image"}
               %i.fa.far.fa-image.fa-2x
               %input.input-box__image__file{id: "message-image", name: "message", type: "file"}
-
           .input-box__send-btn
-            Send
-
+            %input.input-box__send-btn__send{type: "submit",  value: "SENT"}/
+            SEND
