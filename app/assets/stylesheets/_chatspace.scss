@@ -94,26 +94,29 @@
     }
   }
 
-  .messages {
+  .message {
     background-color: #fafafa;
     overflow: scroll;
     height: calc(100vh - 265px);
     padding: 46px 40px;
     line-height: 10px;
 
-    &__test-user {
-      font-weight: bold;
-      font-size: 16px;
-      color: #434A54;
-      display: flex;
-    }
+    &__upper-info{
+      
+      &__talker {
+        font-weight: bold;
+        font-size: 16px;
+        color: #434A54;
+      }
 
       &__date {
         font-size: 12px;
         color: #999999;
+        margin-left: 10px;
       }
+    }
 
-    .comment{
+    .lower-message{
       padding-top: 10px;
       font-size: 14px;
       color: #434A54;
