@@ -8,7 +8,10 @@
           -current_user.groups
         %ul.main-header__left-box__member-list 
           Member:
-      .main-header__edit-btn Edit
+      .main-header__edit-btn
+        = link_to edit_group_path(current_user.id)do
+          Edit
+    
     .messages
       = render @messages
     .form

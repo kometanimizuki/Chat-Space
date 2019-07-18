@@ -58,3 +58,13 @@ gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'font-awesome-rails'
+
+group :development, :test do
+  gem 'byebug', platform: :mri
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.5'
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails'
+  gem 'faker'
+  gem 'jquery-rails'
+end
