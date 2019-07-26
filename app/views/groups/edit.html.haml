@@ -1,10 +1,3 @@
 .chat-group-form
   %h1 チャットグループ編集
-  =render 'form', { group: @group }do
-    %form#edit_chat_group_22.edit_chat_group{"accept-charset" => "UTF-8", :action => "/chat_groups/22", :method => "post"}
-    - if @group.errors.any?
-      .chat-group-form__errors
-        %h2= "#{@group.errors.full_messages.count}件のエラーが発生しました。"
-        %ul
-          - @group.errors.full_messages.each do |message|
-            %li エラーです
+  =render partial: 'form', locals: { group: @group }
