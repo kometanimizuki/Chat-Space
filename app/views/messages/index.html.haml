@@ -7,15 +7,16 @@
     .main-header
       .main-header__left-box
         %h2.main-header__left-box__current-group{"data-group_id": @group.id}
-          - @group.name
+          = @group.name
         %ul.main-header__left-box__member-list 
           Member:
           %li.main-header__left-box__member-list__member
             - @group.users.each do |user|
               =user.name
-      =link_to "/groups/#{@group.id}/edit", class: "" do
-      .main-header__edit-btn Edit
+        -#=link_to "/groups/#{@group.id}/edit", class: "" do
+      .main-header__edit-btn
         = link_to edit_group_path(current_user.id)do
+          Edit
     .messages
       = render @messages
     .form

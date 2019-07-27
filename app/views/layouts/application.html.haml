@@ -3,9 +3,9 @@
   %head
     %meta{content: "text/html; charset=UTF-8", "http-equiv": "Content-Type"}/
     %title ChatSpace
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'load'
     = csrf_meta_tags
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'load'
 
   %body
     = render 'layouts/notifications'
