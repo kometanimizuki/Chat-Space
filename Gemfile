@@ -56,7 +56,7 @@ gem 'font-awesome-sass', '~> 5.4.1'
 gem 'kaminari'
 gem 'devise'
 gem 'carrierwave'
-gem 'mini_magick'
+gem "mini_magick", ">= 4.9.4"
 gem 'font-awesome-rails'
 
 group :development, :test do
