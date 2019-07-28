@@ -86,5 +86,4 @@ Rails.application.configure do
 end
 
 	
-  config.assets.js_compressor = :uglifier
-  end
+ #config.assets.js_compressor = :uglifier
