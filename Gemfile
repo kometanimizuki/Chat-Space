@@ -57,7 +57,6 @@ gem 'devise'
 gem 'carrierwave'
 gem "mini_magick", ">= 4.9.4"
 gem 'font-awesome-rails'
-gem 'font-awesome-sass', '~> 4.4.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
