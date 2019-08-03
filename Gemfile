@@ -48,13 +48,15 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
+gem 'carrierwave'
+gem 'fog-aws'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'haml-rails'
 gem 'kaminari'
 gem 'devise'
-gem 'carrierwave'
+# gem 'carrierwave'
 gem "mini_magick", ">= 4.9.4"
 # gem 'font-awesome-sass', '~> 5.4.1'
 gem 'font-awesome-rails'
