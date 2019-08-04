@@ -24,13 +24,12 @@
         display: flex;
         display: inline-block;
         }
-        &__new-group {
-          .fa {
-            color: white;
-            font-size: $side_header_font;
-        }
+      .fa {
+        color: white;
+        font-size: $side_header_font;
       }
     }
+  }
 
   .groups {
     height: calc(100vh - 100px);
