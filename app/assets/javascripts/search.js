@@ -54,9 +54,6 @@ $(document).on('turbolinks:load', function() {
           alert("ユーザーが見つかりません")
         }
       })
-      .fail(function() {
-        alert("ユーザーの検索に失敗しました")
-      })
     }
     else {
       $('.user-search-result').remove()
