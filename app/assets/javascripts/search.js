@@ -51,7 +51,7 @@ $(document).on('turbolinks:load', function() {
             $('#user-search-result').append(html)
           });
         } else {
-          alert("ユーザーが見つかりません")
+          var html = ("ユーザーが見つかりません")
         }
       })
     }
