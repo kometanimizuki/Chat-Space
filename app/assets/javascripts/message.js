@@ -1,4 +1,4 @@
-$(document).on('turbolinks:reload', function(){
+$(document).on('turbolinks:load', function(){
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
     var img = message.image.url ? `<img src= ${ message.image.url }>` : "";
