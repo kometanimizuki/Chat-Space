@@ -1,13 +1,13 @@
 $(document).on('turbolinks:load', function(){
   function buildHTML(message) {
     var content = message.content ? `${ message.content }` : "";
-    var img = message.image ? `<img src= ${ message.image }>` : "";
+    var img = message.image.url ? `<img src= ${ message.image.url }>` : "";
     var html = `<div class="message__upper-info" data-id="${message.id}">
                     <p class="message__upper-info__talker">
                       ${message.user_name}
                     </p>
                     <p class="message__upper-info__date">
-                      ${message.date}
+                      ${message.created_at}
                     </p>
                   </div>
                     <p class="lower-message__text">
@@ -34,6 +34,7 @@ $(document).on('turbolinks:load', function(){
       contentType: false
     })
     .done(function(data){
+      console.log(data);
       var html = buildHTML(data);
       $('.messages').append(html);
       $('form')[0].reset();
