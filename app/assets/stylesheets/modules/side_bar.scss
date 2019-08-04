@@ -24,10 +24,12 @@
         display: flex;
         display: inline-block;
         }
-        .fa {
-          color: white;
-          font-size: $side_header_font;
+        &__new-group {
+          .fa {
+            color: white;
+            font-size: $side_header_font;
         }
+      }
     }
 
   .groups {
