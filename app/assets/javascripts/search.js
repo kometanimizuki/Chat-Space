@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(document).on('turbolinks:reload', function() {
 
   function appendUser(user) {
     var html = `<div class="user-search-result">
@@ -51,8 +51,12 @@ $(document).on('turbolinks:load', function() {
             $('#user-search-result').append(html)
           });
         } else {
-          var html = ("ユーザーが見つかりません")
+          $("ユーザーが見つかりません").append(html)
+          var html = appendUser(user);
         }
+      })
+      .fail(function() {
+        alert("ユーザーの検索に失敗しました");
       })
     }
     else {
