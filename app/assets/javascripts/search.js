@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(document).on('turbolinks:reload', function() {
 
   function appendUser(user) {
     var html = `<div class="user-search-result">
