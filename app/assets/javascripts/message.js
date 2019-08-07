@@ -43,7 +43,7 @@ $(document).on('turbolinks:load', function(){
       var position = target.offset().top + $('.messages').scrollTop();
       $('.messages').animate({
         scrollTop: position
-      }, 300, 'swing');
+      }, 400, 'swing');
     })
     .fail(function(data){
       alert('メッセージは送信できませんでした')
@@ -77,5 +77,5 @@ $(document).on('turbolinks:load', function(){
       });
     }
   };
-  setInterval(reloadMessages, 5000);
+  setInterval(reloadMessages, 10000);
   });
