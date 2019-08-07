@@ -12,14 +12,14 @@ $(document).on('turbolinks:load', function() {
                 return html;
   }
 
-    function appendName {
+    function appendName () {
       var html = `<div class="user-search-result">
                     <div class="chat-group-user clearfix">
                       <p class="chat-group-user__name">一致するユーザーが見つかりません</p>
                     </div>
                   </div>`
-      }
-
+                  return html;
+    }
     function appendMember(id, name) {
       var html = `<div class="chat-group-user clearfix chat-group-form__field">
                     <input name="group[user_ids][]" type="hidden" value=${id}>
@@ -58,16 +58,14 @@ $(document).on('turbolinks:load', function() {
             var html = appendUser(user);
             $('#user-search-result').append(html)
           });
-        } else {
-          $("ユーザーが見つかりません")
         }
       })
-      .fail(function() {
-        alert("ユーザーの検索に失敗しました");
-      })
-    }
+    .fail(function(){
+      var html =appendName();
+    })
+  }
     else {
       $('.user-search-result').remove()
     }
-    });
   });
+});
