@@ -59,7 +59,6 @@ $(document).on('turbolinks:load', function() {
             $('#user-search-result').append(html)
           });
         } else {
-          console.log(users)
           var html = appendResult();
           $('#user-search-result').append(html)
           }
