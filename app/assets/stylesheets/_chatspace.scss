@@ -3,8 +3,9 @@
 
 
 .flash-box {
-  background-color: #38AEF0;
   color: white;
+  font-size: 1rem;
+  font-weight: lighter;
   text-align: center;
   width: 100vw;
 }
@@ -17,10 +18,9 @@
   .side-header {
     background-color: #253141;
     height: 100px;
-    padding: 0 20px;
-    font-size: 16px;
     display: flex;
     align-items: center;
+    padding: 0 20px;
 
     &__box {
       display: flex;
@@ -79,7 +79,10 @@
       border: solid 1px $btn-color;
       position: absolute;
       right: 40px;
-      color: $btn-color;
+
+      .edit {
+      color: #38aef0;
+      }
     }
 
     &__left-box {
@@ -100,10 +103,10 @@
   }
 
   .messages {
+    height: calc(100vh - 263px);
+    padding: 46px 40px;
     background-color: #fafafa;
     overflow: scroll;
-    height: calc(100vh - 260px);
-    padding: 46px 40px;
   
     .message {
       padding-bottom: 40px;
@@ -132,46 +135,46 @@
     }
 
     .form {
+      //height: 90px;
       padding: 20px 40px;
       background-color: #ddd;
+    }
+      form {
+        display: flex;
 
+        .input-box {
+          position: relative;
+          width: 100%;
 
-      .input-box {
-        position: relative;
-        width: 100%;
+          &__text {
+            height: 50px;
+            width: 100%;
+            padding: 0 5px 0 10px;
+            color: #434a54;
+            border-style: none;
+          }
 
-        &__text {
-          height: 50px;
-          width: 900px;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-        }
+          &__image {
+            font-size: 1.3rem;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
 
-        &__image {
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 120px;
-          cursor: pointer;
-
-          &__file {
-            display: none;
+            &__file {
+              display: none;
+            }
           }
         }
+        .submit-btn {
+          width: 100px;
+          height: 50px;
+          padding: 0 30px;
+          margin-left: 15px;
+          background-color: #38aef0;
+          color: white;
+          cursor: pointer;
+        }
       }
-      .submit-btn {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
-        position: absolute;
-        right: 0;
-        bottom: 0;
-      }
-    }
 }
 
