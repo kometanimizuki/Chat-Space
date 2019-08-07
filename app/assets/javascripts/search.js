@@ -11,20 +11,20 @@ $(document).on('turbolinks:load', function() {
                 </div>`
                 return html;
   }
-
-    function appendName () {
-      var html = `<div class="user-search-result">
-                    <div class="chat-group-user clearfix">
-                      <p class="chat-group-user__name">一致するユーザーが見つかりません</p>
-                    </div>
-                  </div>`
-                  return html;
-    }
     function appendMember(id, name) {
       var html = `<div class="chat-group-user clearfix chat-group-form__field">
                     <input name="group[user_ids][]" type="hidden" value=${id}>
                     <p class="chat-group-user__name">${name}</p>
                     <a class="user-search-remove chat-group-user__btn chat-group-user__btn--remove">削除</div>
+                  </div>`
+                  return html;
+    }
+
+    function appendResult (){
+      var html = `<div class="user-search-result">
+                    <div class="chat-group-user clearfix">
+                      <p class="chat-group-user__name">一致するユーザーが見つかりません</p>
+                    </div>
                   </div>`
                   return html;
     }
@@ -58,13 +58,16 @@ $(document).on('turbolinks:load', function() {
             var html = appendUser(user);
             $('#user-search-result').append(html)
           });
-        }
+        } else {
+          console.log(users)
+          var html = appendResult();
+          $('#user-search-result').append(html)
+          }
+        })
+      .fail(function() {
+        alert("ユーザーの検索に失敗しました")
       })
-    .fail(function(){
-      var html =appendName();
-    })
-  }
-    else {
+    }else {
       $('.user-search-result').remove()
     }
   });
