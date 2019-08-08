@@ -42,7 +42,7 @@ $(document).on('turbolinks:load', function(){
       var target = $('.message__upper-info').last();
       var position = target.offset().top + $('.messages').scrollTop();
       $('.messages').animate({
-        scrollTop: position
+        scrollBottom: position
       }, 300, 'swing');
     })  
     .fail(function(){
